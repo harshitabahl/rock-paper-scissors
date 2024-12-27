@@ -1,6 +1,7 @@
 * {
     margin : 0;
     padding : 0;
+    box-sizing: border-box;
 }
 
 h1 {
@@ -8,7 +9,8 @@ h1 {
     color: white;
     height : 5rem;
     line-height : 5rem;
-    text-align: center; text-underline-position: below;
+    text-align: center; 
+    text-underline-position: below;
 }
 
 .choice {
@@ -26,6 +28,7 @@ img {
     border-radius: 50%;
     height: 20vw;
     width: 20vw;
+    aspect-ratio: 1/1;
 }
 
 .choices {
@@ -72,7 +75,7 @@ body.dark-mode .game-message {
     border: 2px solid #ccc;
     border-radius: 50%;
     background-color: #f9f9f9;
-    transition: background-color 0.3s, border-color 0.3s;
+    transition: background-color 0.3s, border-color 0.3s, all 0.3s ease;
 }
 
 .button:hover {
@@ -85,4 +88,46 @@ body.dark-mode .game-message {
     width: 32px;
     height: 32px;
     margin: auto;
+}
+@media (max-width: 768px) {
+    img {
+        height: 25vw;
+        width: 25vw;
+    }
+
+    .choices {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    img {
+        height: 30vw;
+        width: 30vw;
+    }
+
+    .game-message {
+        font-size: 16px;
+    }
+
+    h1 {
+        font-size: 1.2rem;
+        height: auto;
+        line-height: 1.5rem;
+    }
+
+    .button {
+        width: 40px;
+        height: 40px;
+    }
+
+    .button img {
+        width: 24px;
+        height: 24px;
+    }
 }
