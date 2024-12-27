@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-h1 {
+ h1 {
     background-color: #081b31;
     color: white;
     height : 5rem;
@@ -13,12 +13,12 @@ h1 {
     text-underline-position: below;
 }
 
-.choice {
+.choice { 
     cursor: pointer;
     transition: all 0.3s;
 }
 
-.choice:hover {
+ .choice:hover { 
     transform: scale(1.1);
 }
 
@@ -31,10 +31,9 @@ img {
     aspect-ratio: 1/1;
 }
 
-.choices {
-    /* TODO: This  */
+ .choices { 
     display: flex;
-    flex-direction: row - reverse ;
+    flex-direction: row ;
     justify-content: center;
     align-items: center;
     gap: 5rem;
@@ -42,18 +41,15 @@ img {
 }
 
 
-body.light-mode {
+body.light-mode { 
     background-color: #fff;
-    color: #000;
 }
-
 
 body.dark-mode {
     background-color: #0f0c0c;
-    color: #fff;
 }
 
-.game-message {
+ .game-message { 
     margin-top: 20px;
     font-size: 18px;
     font-weight: bold;
@@ -65,22 +61,22 @@ body.dark-mode .game-message {
     color: #fff; 
 }
 
-.button {
+ .button { 
     position: fixed;
     top: 10px;
     right: 10px;
     display: inline-block;
     cursor: pointer;
     padding: 10px;
-    border: 2px solid #ccc;
+    border: 2px;
     border-radius: 50%;
-    background-color: #f9f9f9;
+    background-color: #081b31;
     transition: background-color 0.3s, border-color 0.3s, all 0.3s ease;
 }
 
-.button:hover {
-    background-color: #e0e0e0;
-    border-color: #888;
+ .button:hover { 
+    background-color: #081b31;
+    border-color: #081b31;
 }
 
 .button img {
@@ -105,29 +101,34 @@ body.dark-mode .game-message {
     }
 }
 
-@media (max-width: 480px) {
+ @media (max-width: 480px) {
     img {
         height: 30vw;
         width: 30vw;
     }
 
-    .game-message {
+    .game-message { 
         font-size: 16px;
     }
 
     h1 {
-        font-size: 1.2rem;
+        font-size: auto;
         height: auto;
         line-height: 1.5rem;
     }
 
     .button {
-        width: 40px;
-        height: 40px;
+        width: 30px;
+        height: 30px;
+        top: 0.1px;
+        margin-right: 2.9px;
+       
     }
 
     .button img {
-        width: 24px;
-        height: 24px;
+        display: block;
+        width: 32px;
+        height: 32px;
+        margin: auto;
     }
-}
+} 
